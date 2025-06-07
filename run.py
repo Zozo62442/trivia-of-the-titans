@@ -23,6 +23,8 @@ def show_intro():
     print("🔍 Just type the letter of your chosen answer and hit Enter.\n")
     print("✨ Let the challenge begin, hero! ✨\n")
 
+    username = input("Please enter your adventurer name: ").strip().capitalize()
+
     input("🔮 Press Enter to begin your quest... ")
     print("\nSummoning the gods...\n")
     time.sleep(1)

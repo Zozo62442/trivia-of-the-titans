@@ -1,5 +1,5 @@
 import requests
-import html
+import random
 
 def get_questions():
     """
@@ -11,4 +11,19 @@ def get_questions():
     data = response.json()
 
     questions = []
-    
+
+    for item in data["results"]:
+        question = item["question"]
+        correct = item["correct_answer"]
+        incorrect = [ans for ans in item["incorrect_answers"]]
+        options = incorrect + [correct]
+
+        random.shuffle(options)
+
+        questions.append({
+            "question": question,
+            "options": options,
+            "correct": correct
+        })
+
+    return questions

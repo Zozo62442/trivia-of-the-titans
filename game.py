@@ -1,5 +1,5 @@
 from api import get_questions
-from utils import get_user_choice, clear_screen
+from utils import validate_answer, show_final_results
 import time
 
 def start_quiz(username):
@@ -12,13 +12,20 @@ def start_quiz(username):
     time.sleep(2)
     # 1. Fetch questions
     questions = get_questions()
+    guesses = []
+    answers = []
     score = 0
+    question_num = 0
 
     if not questions:
         print("❌ Sorry, we couldn't load any quiz questions. Please try later.")
         return
 
     # 2. Loop through them
+    for q in questions:
+        print("----------------------")
+        print(f"Q{question_num + 1}: {q['question']}")
+
     # 3. Display each question and choices
     # 4. Get user input and check if it's correct
     # 5. Track score
