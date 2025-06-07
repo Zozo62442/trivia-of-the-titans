@@ -86,3 +86,6 @@ This project is deployed using Code Institute’s mock terminal for Heroku or ho
 3. Set buildpacks: Python (and NodeJS for Heroku CLI if needed).
 4. Add required dependencies in `requirements.txt`.
 5. Add a `Procfile` containing:  
+
+## Resources:
+- ASCII generator [patorjk] (https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20)
