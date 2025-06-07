@@ -18,16 +18,43 @@ def start_quiz(username):
     question_num = 0
 
     if not questions:
-        print("❌ Sorry, we couldn't load any quiz questions. Please try later.")
+        print("Sorry, we couldn't load any quiz questions. Please try again.")
         return
 
-    # 2. Loop through them
     for q in questions:
         print("----------------------")
         print(f"Q{question_num + 1}: {q['question']}")
 
-    # 3. Display each question and choices
-    # 4. Get user input and check if it's correct
-    # 5. Track score
-    # 6. Show final result
+        options = q["options"]
+        lettered_options = {
+            "A": options[0],
+            "B": options[1],
+            "C": options[2],
+            "D": options[3]
+        }
+        for letter, option in lettered_options.items():
+            print(f"{letter}: {option}")
+        
+        while True:
+            guess = input("Enter (A, B, C, D): ").upper()
+            if validate_answer(guess, options):
+                break
+            else:
+                print("Invalid input. Please choose A, B, C, or D.")
+
+        guesses.append(guess)
+
+        for letter, answer_text in lettered_options.items():
+            if answer_text == q["correct"]:
+                correct_letter = letter
+                break 
+
+        answers.append(correct_letter)
+        if guess == correct_letter:
+            print("Correct!")
+            score += 1
+        else:
+            print(f"Wrong! The correct answer was {correct_letter}.")
+        question_num += 1
+        time.sleep(1)
 
