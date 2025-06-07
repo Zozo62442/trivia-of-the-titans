@@ -11,6 +11,13 @@ def start_quiz(username):
     print("You'll be asked 10 mythology questions. Choose the correct answer by typing A, B, C, or D (it is case sensitive)!\n")
     time.sleep(2)
     # 1. Fetch questions
+    questions = get_questions()
+    score = 0
+
+    if not questions:
+        print("❌ Sorry, we couldn't load any quiz questions. Please try later.")
+        return
+
     # 2. Loop through them
     # 3. Display each question and choices
     # 4. Get user input and check if it's correct
