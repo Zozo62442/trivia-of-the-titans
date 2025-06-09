@@ -55,7 +55,8 @@ Questions are pulled dynamically from [OpenTDB](https://opentdb.com), making eac
 ## Testing
 
 ### Manual Tests
-
+- Placed the individual section of the code in PEP8 CI Linter and no errors were detected.
+- Tested in an online IDE python syntax checker [ONLINE IDE](https://www.online-ide.com/online_python_syntax_checker)
 
 ### Linter
 
