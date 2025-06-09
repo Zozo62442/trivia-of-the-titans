@@ -2,7 +2,7 @@
 
 **Trivia of the Titans** is a command-line Python quiz game that tests your knowledge of mythology using randomly generated questions from the Open Trivia Database. The player answers 10 mythological questions and gets their final score at the end. 
 
-[Live version of the project – hosted on Heroku or Replit]()
+[Live version of the project – hosted on Heroku]()
 
 ---
 
@@ -28,7 +28,7 @@ Questions are pulled dynamically from [OpenTDB](https://opentdb.com), making eac
 - Error messages for invalid input
 - Final score presented at the end
 - Live API integration (OpenTDB)
-- Clean modular codebase (separated into `run.py`, `game.py`, `api.py`)
+- Clean modular codebase (separated into `run.py`, `game.py`, `api.py`, `utile.py`)
 - Fun, friendly terminal interface
 
 ### Future Features
@@ -59,7 +59,7 @@ Questions are pulled dynamically from [OpenTDB](https://opentdb.com), making eac
 
 ### Linter
 
-- [PEP8 Online](http://pep8online.com/).
+- [PEP8 Online](https://pep8ci.herokuapp.com/).
 
 ---
 

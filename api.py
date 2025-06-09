@@ -1,6 +1,7 @@
 import requests
 import random
 
+
 def get_questions():
     """
     Fetches 10 multiple choice questions from the OpenTDB API
@@ -26,4 +27,4 @@ def get_questions():
             "correct": correct
         })
 
-    return questions 
+    return questions

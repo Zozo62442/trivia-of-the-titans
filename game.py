@@ -2,6 +2,7 @@ from api import get_questions
 from utile import validate_answer, show_final_results, clear_screen
 import time
 
+
 def start_quiz(username):
     """
     Runs the main quiz game loop.
@@ -34,7 +35,6 @@ def start_quiz(username):
         }
         for letter, option in lettered_options.items():
             print(f"{letter}: {option}")
-        
         while True:
             guess = input("Enter (A, B, C, D): ").upper()
             if validate_answer(guess, options):
@@ -48,7 +48,7 @@ def start_quiz(username):
         for letter, answer_text in lettered_options.items():
             if answer_text == question["correct"]:
                 correct_letter = letter
-                break 
+                break
 
         answers.append(correct_letter)
 

@@ -1,5 +1,6 @@
 import os
 
+
 def validate_answer(user_input, options):
     """
     Validate user input.
@@ -7,11 +8,13 @@ def validate_answer(user_input, options):
     valid_inputs = ['A', 'B', 'C', 'D']
     return user_input in valid_inputs and len(options) == 4
 
+
 def clear_screen():
     """
     Clears the console screen.
     """
     os.system('cls' if os.name == 'nt' else 'clear')
+
 
 def show_final_results(answers, guesses, score):
     """
