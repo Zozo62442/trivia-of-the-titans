@@ -88,4 +88,5 @@ This project is deployed using Code Institute’s mock terminal for Heroku or ho
 5. Add a `Procfile` containing:  
 
 ## Resources:
-- ASCII generator [patorjk] (https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20)
+- ASCII generator [patorjk](https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20)
+- Youtube video [Bro Code](https://www.youtube.com/watch?v=zehwgTB0vV8)

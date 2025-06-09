@@ -1,5 +1,5 @@
 from api import get_questions
-from utils import validate_answer, show_final_results
+from utile import validate_answer, show_final_results, clear_screen
 import time
 
 def start_quiz(username):
@@ -7,10 +7,10 @@ def start_quiz(username):
     Runs the main quiz game loop.
     """
     clear_screen()
-    print(f"🎉 Welcome to Trivia of Titans {username}! \n")
+    print(f"Welcome to Trivia of Titans {username}! \n")
     print("You'll be asked 10 mythology questions. Choose the correct answer by typing A, B, C, or D (it is case sensitive)!\n")
     time.sleep(2)
-    # 1. Fetch questions
+
     questions = get_questions()
     guesses = []
     answers = []
@@ -21,11 +21,11 @@ def start_quiz(username):
         print("Sorry, we couldn't load any quiz questions. Please try again.")
         return
 
-    for q in questions:
+    for question in questions:
         print("----------------------")
-        print(f"Q{question_num + 1}: {q['question']}")
+        print(f"Q{question_num + 1}: {question['question']}")
 
-        options = q["options"]
+        options = question["options"]
         lettered_options = {
             "A": options[0],
             "B": options[1],
@@ -41,15 +41,17 @@ def start_quiz(username):
                 break
             else:
                 print("Invalid input. Please choose A, B, C, or D.")
+        clear_screen()
 
         guesses.append(guess)
 
         for letter, answer_text in lettered_options.items():
-            if answer_text == q["correct"]:
+            if answer_text == question["correct"]:
                 correct_letter = letter
                 break 
 
         answers.append(correct_letter)
+
         if guess == correct_letter:
             print("Correct!")
             score += 1
@@ -58,3 +60,4 @@ def start_quiz(username):
         question_num += 1
         time.sleep(1)
 
+    show_final_results(answers, guesses, score)
