@@ -29,13 +29,12 @@ Questions are pulled dynamically from [OpenTDB](https://opentdb.com), making eac
 - Final score presented at the end
 - Live API integration (OpenTDB)
 - Clean modular codebase (separated into `run.py`, `game.py`, `api.py`, `utile.py`)
-- Fun, friendly terminal interface
 
 ### Future Features
 
 - Category or difficulty selection
 - Scoreboard or high score tracking
-- Timed answers or “streak” bonuses
+- Timed answers
 - Save stats to file or database
 - More myth themes (Norse, Egyptian, etc.)
 
@@ -83,10 +82,12 @@ This project is deployed using Code Institute’s mock terminal for Heroku or ho
 ### Deployment Steps:
 
 1. Fork or clone this repository.
-2. Create a new Heroku app or Replit project.
-3. Set buildpacks: Python (and NodeJS for Heroku CLI if needed).
+2. Create a new Heroku app.
+3. Set buildpacks: Python and NodeJS in this order.
 4. Add required dependencies in `requirements.txt`.
-5. Add a `Procfile` containing:  
+5. Add a `Procfile` containing: web: node index.js
+6. Link Heroku app to repository.
+7. Click on Deploy
 
 ## Resources:
 - ASCII generator [patorjk](https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20)
