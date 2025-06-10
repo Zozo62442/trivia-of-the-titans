@@ -1,5 +1,5 @@
 from api import get_questions
-from utile import validate_answer, show_final_results, clear_screen
+from utils import validate_answer, show_final_results, clear_screen
 import time
 
 
