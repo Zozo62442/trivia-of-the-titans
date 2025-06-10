@@ -6,6 +6,8 @@
 
 ---
 
+Hello
+
 ## How to Play
 
 - Launch the app in the terminal.
