@@ -52,6 +52,10 @@ Questions are pulled dynamically from [OpenTDB](https://opentdb.com), making eac
 - Live API integration (OpenTDB)
 - Clean modular codebase (separated into `run.py`, `game.py`, `api.py`, `utile.py`)
 
+![Opening game view](docs/trivia-of-the-titans.png)
+![Question view](docs/trivia-question-view.png)
+![Final score view](docs/score-view.png)
+
 ### Future Features
 
 - Category or difficulty selection
