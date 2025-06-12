@@ -22,11 +22,11 @@ def show_intro():
 while True:
     username = input("Please enter your adventurer name: ").strip()
     if username.isalnum():
-            username = username.capitalize()
-            break
-        else:
-            print("Invalid name! Please use only letters or letters and numbers (no symbols or spaces).")
-
+        username = username.capitalize()
+        break
+    else:
+        print("Invalid name! Please use only letters or letters and numbers (no symbols or spaces).")
+    
     input("Press Enter to begin your quest... ")
     print("\nSummoning the gods...\n")
     time.sleep(1)
