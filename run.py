@@ -34,7 +34,7 @@ def show_intro():
 
 
 def main():
-    show_intro()
+    username = show_intro()
     start_quiz(username)
 
 
