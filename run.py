@@ -19,6 +19,7 @@ def show_intro():
     print("Just type the letter of your chosen answer and hit Enter.\n")
     print("Let the challenge begin, hero! ✨\n")
 
+while True:
     username = input("Please enter your adventurer name: ").strip()
     if username.isalnum():
             username = username.capitalize()
