@@ -19,16 +19,22 @@ def show_intro():
     print("Just type the letter of your chosen answer and hit Enter.\n")
     print("Let the challenge begin, hero! ✨\n")
 
-    username = input("Please enter your adventurer name: ").strip().capitalize()
+    username = input("Please enter your adventurer name: ").strip()
+    if username.isalnum():
+            username = username.capitalize()
+            break
+        else:
+            print("Invalid name! Please use only letters or letters and numbers (no symbols or spaces).")
 
     input("Press Enter to begin your quest... ")
     print("\nSummoning the gods...\n")
     time.sleep(1)
+    return username
 
 
 def main():
     show_intro()
-    start_quiz()
+    start_quiz(username)
 
 if __name__ == "__main__":
     main()

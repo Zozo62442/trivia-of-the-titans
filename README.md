@@ -1,6 +1,7 @@
 # Trivia of the Titans
 
 **Trivia of the Titans** is a command-line Python quiz game that tests your knowledge of mythology using randomly generated questions from the Open Trivia Database. The player answers 10 mythological questions and gets their final score at the end. 
+![Trivia of the Titans](docs/trivia-of-the-titans.png)
 
 [Live version of the project – hosted on Heroku]()
 
@@ -23,7 +24,7 @@ The goal of this project is to create an interactive and educational Python quiz
 
 ## Flowchart
 - Using Canva I made a flowchart based on the requirements, the user stories and project goals:
-! [Flowchart](docs/flowchart.png)
+![Flowchart](docs/flowchart.png)
 
 ---
 
