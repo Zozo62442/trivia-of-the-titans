@@ -1,5 +1,6 @@
 import requests
 import random
+import html
 
 
 def get_questions():
@@ -14,9 +15,9 @@ def get_questions():
     questions = []
 
     for item in data["results"]:
-        question = item["question"]
-        correct = item["correct_answer"]
-        incorrect = [ans for ans in item["incorrect_answers"]]
+        question = html.unescape(item["question"])
+        correct = html.unescape(item["correct_answer"])
+        incorrect = [html.unescape(ans) for ans in item["incorrect_answers"]]
         options = incorrect + [correct]
 
         random.shuffle(options)
